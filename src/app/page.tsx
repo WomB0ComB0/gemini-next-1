@@ -2,7 +2,7 @@
 import React, { FormEvent, useEffect, useState } from "react";
 import { ChatSession, GoogleGenerativeAI } from "@google/generative-ai";
 
-const API_KEY = "ADD_YOUR_API_KEY";
+const API_KEY = process.env.API_KEY as string;
 const genAI = new GoogleGenerativeAI(API_KEY);
 const model = genAI.getGenerativeModel({ model: "gemini-pro" });
 
